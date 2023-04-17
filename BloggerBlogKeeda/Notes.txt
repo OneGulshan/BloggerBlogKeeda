@@ -1,0 +1,57 @@
+85.ASP.NET CORE Tutorial For Beginners 85 : How to create Blog in ASP.NET CORE PART-1
+- Here we Now How to Start Design Aps.net core mvc Project using Basic Code Structure, Micro Service Code Structure(Intermediate) and Onion Architecture(Advanced). <- Here Project making learning in 3 pahases
+- Basic Code Structure :- Models, View Models, DataContext, Program.cs, Controllers, Views
+- Micro Service Code Structure :- Models, View Models, Data Context, Infrastructure, Repoditory, Dependency Injection, Controller, Views
+- Onion Architecture :- Data Access Layer, Buisness Layer, Repository Layer, Service Layer, UI Layer.
+- Create a BloggerBlog Project with Preparing AppUser Models. Post, Category, PostCategory and AppUser.
+
+86.ASP.NET CORE Tutorial For Beginners 86 : How to create Blog in ASP.NET CORE PART-2
+- Now we know how to set Identity in a Asp.net core Project.
+- Inherite IdentityUser with AppUser Class for using default Microsoft Identity Service using AppUser Class.
+- Now Inherit IdentityDbContext with DataContext and in IdentityDbContext use AppUser, for Using Identity Service with DataContext using by AppUsers. and initialize DataContext throw constructor. and DbSet our Models also.
+- Now Add Identity in our Project.
+
+87.ASP.NET CORE Tutorial For Beginners 87 : How to create Blog in ASP.NET CORE PART-3
+- Now add connection string then register connection string in Program.cs, then make post and category controller and views using EF scaffolding.
+- Now add Category Details in Post Details method, using navigation PostCategory table. AddDefaultIdentity also in Program.cs file.
+- Now add _LoginPartial in _Layout.cshtml page. add-migration and update-migration also.
+- Note:- IdentityDbContext is an Context class used for Communicating with DataBase.
+
+88.ASP.NET CORE Tutorial For Beginners 88 : How to create Blog in ASP.NET CORE PART-4
+- Add Some Categories in Category table. add some modifications in Application for correction in application and making beutiful also.
+- map our razor pages using program.cs file.
+
+89.ASP.NET CORE Tutorial For Beginners 89 : How to create Blog in ASP.NET CORE PART-5
+- Create PostViewModel For showing Categories details with Post Details.
+- Now send SelectListItem type categories on Create View. Now Make Checkboxes on Create View using SelectListItem type categories.
+- Now on Create Post method write code of Category and Post. Now use UserManager class on Post Controller and create user here.
+- Now add UseAuthentication in Program.cs file. and change AppUserId from Guid to string add-migration and update-database.
+- Now Register User Login and Authorize Post Controller then Create Posts with Categories.
+- Note:- On Checkboxes inserting time id is not rendered on Controller so for rendering its maked hidden type
+
+90.ASP.NET CORE Tutorial For Beginners 90 : How to create Blog in ASP.NET CORE PART-6
+- Include User in Index Action Method of Post Controller. Add PictureURL string in AppUser class for storing string of Profile image.
+- In Manage -> Index.cs page add IFormFile ProfilePicture for showing profile image and in InputModel. Then use in View also with using enctype="multipart/form-data".
+- Then write code of adding picture in Index.cshtml.cs razor page. login -> Profile -> Update Image.
+
+91.ASP.NET CORE Tutorial For Beginners 91 : How to create Blog in ASP.NET CORE PART-7
+- Now Display our Updated profile Image In Post Index View. and Remove AppUserId from Edit View.
+- Now add PostStatus enum in post Model with StatusOfPost(PostStatus) and PostVisibility(bool) prop.
+- Now add Paging in Post Index View steps:- Create PaginatedList model -> move on url https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/sort-filter-page?view=aspnetcore-7.0 serch PaginatedList copy full class with code and replace by our PaginatedList class.
+- Now Copy Index.cshtml page code and paste in our Index Page. and IEnumerable replace by PaginatedList because some prop exist in it.
+- Now In Index method add some PageSize limit setting code with adjusting user. now increate Posts add see Pagination now.
+
+92.ASP.NET CORE Tutorial For Beginners 91 : How to create Blog in ASP.NET CORE PART-8
+- Create Tags Model, Then PostTags middel table with many to many mapping doing. Then Create Tags Controller using EF.
+- Then add SelectListItem type Tags in PostViewModel. Then add this Tags in Post Create and Details Action methods.
+
+94.ASP.NET CORE Tutorial For Beginners 94 : How to create Blog in ASP.NET CORE PART-9
+- Authorize atribute is used for make mandatory login to user, otherwise can't accessible. for solving this we using roles in application.
+- Here we Knowing how to assign and Create Roles.
+- Create a DbInitializer Class for adding default Admin User.
+- Thats not working in it because we have not Main method in Program.cs file.
+
+Note:- jQuery Grid.
+- Add migration and update-migration is compolsory after adding any prop in model class.
+- Har cheez ko aasan banana tabhi ho sakta hai jab jab uska apko algorithm malum ho. algorithm ye kheta hai ki step by step hamko chalna hai, phele hame ye decide karna hai ki hamein kya karna hai, fir uska ek structure banana hai, fir usko access kar ke banna hai. <- taki fir vo cheez chalti jaegi.
+- make a one project and use its concept in other projects simple development.
